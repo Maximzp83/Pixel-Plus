@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pixel Plus v3</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="../../css/main.css">
+	<link rel="stylesheet" type="text/css" href="../../css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../../css/fonts.css">
+
+</head>
+<body>
+	<div class="wrapper">
+<!--=============================FeedBack=======================================-->
+		<div class="feedback-container">
+			<button type="button" name="close-button" onclick="closeFeedBack()">X</button>
+			<div class="feedback-title">ОБРАТНАЯ СВЯЗЬ</div>
+			<form action="#" method="post" name="feedback-form">
+				<label for="name-field" class="label">Ваше имя*</label>
+				<input id="name-field" type="text" name="user-name" placeholder="Имя" required> 
+				<label for="phone-field" class="label">Телефон*</label>
+				<input id="phone-field" type="text" name="user-phone" placeholder="номер телефона" required>
+				<label for="email-field" class="label">E-mail*</label>
+				<input id="email-field" type="text" name="user-email" placeholder="почта" required>
+				<label for="message-field" class="label">Сообщение</label>
+				<textarea id="message-field" name="user-message" rows="10"></textarea>
+				<button type="submit" name="feedback-submit">ОТПРАВИТЬ</button>
+			</form>
+		</div>
+		<div class="background-wrapper"></div>
+
+<!--==============================HEADER========================================-->
+		<header>
+			<div class="header-wrapper">
+				<div class="logo-container">
+					<div class="logo"></div>
+					<div class="logo-content-container">
+						<h1 class="company-name">Название<br>компании</h1>
+						<div>самая клевая компания</div>
+					</div>
+				</div>
+				<div>
+					<div class="phone">+7(499) 777-77-77<br>+7(499) 777-77-77</div>
+					<div class="feedback">
+					<button type="button" name="feedback-button" onclick="showFeedBack()">Обратная связь</button></div>
+				</div>
+			</div>
+		</header>
+<!--==============================Top Menu======================================-->
+		<nav class="top-menu-container">
+			<ul class="top-menu">
+				<li><a href="../../index.html">Главная</a></li>
+				<li class="bracket">|</li>
+				<li>
+					<a href="#" class="sub-menu-link">Каталог <span>&or;</span></a>
+					<ul class="sub-menu">
+						<li><a href="#">Автомобили</a></li>
+						<li><a href="appliances.html">Бытовая техника*</a></li>
+						<li><a href="#">Мобильная техника</a></li>
+						<li><a href="#">Компьютеры</a></li>
+						<li><a href="#">Одежда</a></li>
+						<li><a href="#">Недвижимость</a></li>
+					</ul>
+				</li>
+				<li class="bracket">|</li>
+				<li><a href="#">Доставка и оплата</a></li>
+				<li class="bracket">|</li>
+				<li><a href="#">Прайс-лист</a></li>
+				<li class="bracket">|</li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+		</nav>
+<!--==============================Slider========================================-->
+		<div class="slider-wrapper">
+			<svg class="svg-image" width="100%" height="400px">
+				<defs>
+					<symbol id="s-circle" >
+						<circle r='162' cx="200" cy="200" style="fill-opacity: 0.3" />
+					</symbol>					
+				</defs>
+
+				<use xlink:href="#s-circle" x="45" y="70"	fill="rgb(67,92,200)" />
+				<use xlink:href="#s-circle" x="563" y="50"	fill="rgb(95,207,62)" transform="scale(0.55, 0.55)" />
+				<use xlink:href="#s-circle" x="490" y="20"	fill="rgb(247,151,69)" transform="scale(0.92, 0.92)" />
+				<use xlink:href="#s-circle" x="1170" y="66"	fill="rgb(67,92,200)" transform="scale(0.7, 0.7)" />
+				<use xlink:href="#s-circle" x="1083" y="-105"	fill="rgb(247,151,69)" transform="scale(0.92, 0.92)" />
+				<use xlink:href="#s-circle" x="2058" y="325"	fill="rgb(95,207,62)" transform="scale(0.55, 0.55)" />
+			</svg>
+			<div class="slider-container">
+				<div>
+					<div class="overlink-wrapper">
+						<a href="#" class="slider-link-container">
+							<div class="slider-background slider-background-1"></div>
+						</a>
+						<div class="slider-left-arrow slider-arrow">
+							<button type="button" name="prev" onclick="prevSliderImage()">&lsaquo;</button>
+						</div>
+						<div class="slider-right-arrow slider-arrow">
+							<button type="button" name="next" onclick="nextSliderImage()">&rsaquo;</button>
+						</div>
+					</div>
+					<div id="sliderButtonsContainer"></div>
+				</div>
+			</div>
+		</div>
+
+<!--==============================Main-Content===================================-->
+		
+		<div class="content-main-wrapper">
+			<ol class="breadcrumbs">
+				<li class="breadcrumbs-item breadcrumbs-item-home" itemscope itemref="breadcrumb-1">
+					<a href="../../index.html" itemprop="url" class="breadcrumbs-link">Главная</a>
+				</li>
+				<li>/</li>
+				<li id="breadcrumb-1" class="breadcrumbs-item" itemscope itemref="breadcrumb-2">
+					<a href="../catalog.html" itemprop="../catalog.html" class="breadcrumbs-link">Каталог</a>
+				</li>
+				<li>/</li>
+				<li id="breadcrumb-2" class="breadcrumbs-item">
+					<a href="appliances.html" itemprop="url" class="breadcrumbs-link">Бытовая техника</a>
+				</li>
+			</ol>
+			<div class="content-wrapper">
+				<!--__________Left-Menu__________-->
+				<aside class="aside-container">
+				<div class="left-menu-wrapper">
+						<div class="left-menu-title">КАТАЛОГ</div>
+					<ul class="left-menu">
+						<li class="menu-item-1">
+							<div class="menu-item-name-1" onclick="openCloseLeftMenu(this)">Автомобили <span>&#8661;</span></div>
+							<ul class="nested-list-1 nested-list" style="transition: all 0.6s; display: none; height: 5px; opacity: 0;">
+								<li><a href="#">Mercedes</a></li>
+								<li><a href="#">Ford</a></li>
+								<li><a href="#">Toyota</a></li>
+								<li><a href="#">Reno</a></li>
+								<li><a href="#">ЗАЗ</a></li>
+								<li><a href="#">ВАЗ</a></li>
+							</ul>
+						</li>
+						<li class="menu-item-2">
+							<div class="menu-item-name-2" onclick="openCloseLeftMenu(this)">Бытовая техника <span>&#8661;</span></div>
+							<ul class="nested-list-2 nested-list" style="transition: all 0.6s; display: none; height: 0px; opacity: 0;">
+								<li><a href="#">Микроволновки</a></li>
+								<li><a href="#">Холодильники</a></li>
+								<li><a href="#">Посудомоечные машины</a></li>
+								<li><a href="teapots/teapots.html">Чайники*</a></li>
+								<div></div>
+							</ul>
+						</li>
+						<li><div>Мобильная техника</div></li>
+						<li><div>Компьютеры</div></li>
+						<li><div>Одежда</div></li>
+						<li><div>Недвижимость</div></li>
+					</ul>
+					</div>
+
+					<div class="price-list-container">
+						<a href="#">
+							<div class="inner inner-image"></div>
+							<span class="inner-text">Прайс-лист</span>
+						</a>
+					</div>
+				</aside>
+
+				<!--==============================Content===================================-->
+				<article class="content-container">
+					<!--__________product table__________-->
+					<ul class="category-list">
+						<li class="goods-category-container goods-item-container">
+							<a class="link-container" href="#">
+								<img class="goods-item-image" src="appliances-images/nophoto.jpg" alt="no-img">
+								<p class="product-description">Микроволновки</p>
+							</a>
+						</li>
+						<li class="goods-category-container goods-item-container">
+							<a class="link-container" href="#">
+								<img class="goods-item-image" src="appliances-images/nophoto.jpg" alt="no-img">
+								<p class="product-description">Посудомоечные машины</p>
+							</a>
+						</li>
+						<li class="goods-category-container goods-item-container">
+							<a class="link-container" href="#">
+								<img class="goods-item-image" src="appliances-images/nophoto.jpg" alt="no-img">
+								<p class="product-description">Холодильники</p>
+							</a>
+						</li>
+						<li class="goods-category-container goods-item-container">
+							<a class="link-container" href="teapots/teapots.html">
+								<img class="goods-item-image" src="appliances-images/nophoto.jpg" alt="no-img">
+								<p class="product-description">Клёвые Чайники*</p>
+							</a>
+						</li>
+					</ul>
+					<div class="pages-container">
+					</div>
+					<!--__________text__________-->
+					<div class="text-container">
+						<p>Компания &laquo;Пиксель Плюс&raquo; существует более 6 лет, за это время мы принимали участие в разработке более чем 700 сайтов, поэтому можем уверенно называть себя профессионалами. На данный момент наш коллектив состоит из более чем 30 сотрудников работающих в двух офисах в Москве и Зеленограде. характерные для этого жанра мотивы: неразделенной любви, ухода молодости, угасания души.</p>
+
+						<p>Одним из основных направлений работ нашей компании является поисковое продвижение сайтов, на данный момент мы работаем с более чем 150 постоянными клиентами по более чем 11 000 поисковым запросам. При этом в работе основной акцент мы делаем на качестве работ, а так же применяем собственные уникальные разработки в области SEO продвижения. На данный момент отдел SEO состоит из 9 человек под руководством ведущего специалиста, преимущественно работающих в нашем московском офисе.</p>
+					</div>
+				</article>
+			</div>
+		</div>
+<!--==============================Footer========================================-->
+		<footer>
+			<div class="footer-wrapper">
+				<div class="copyright">&copy; 2012-2013 ЗАО &laquo;Компания&raquo;<br/><a href="">info@name.ru</a> </div>
+				<ul class="footer-nav-links">
+					<li><a href="../../index.html">Главная</a></li>
+					<li><a href="#">Каталог</a></li>
+					<li><a href="#">Доставка и оплата</a></li>
+					<li><a href="#">Прайс-лист</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+				<div class="footer-logo-container">
+					<div class="footer-logo"><img src="../../img/footer-logo.png" alt="no-img"></div>
+					<div class="footer-logo-content"> <a href="../../index.html">Разработка сайта</a> - <br>компания &laquo;Пиксель Плюс&raquo;</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	 <script src="../../js/script.js"></script>
+
+</body>
+</html>
+

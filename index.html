@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pixel Plus v3</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/fonts.css">
+
+</head>
+<body>
+	<div class="wrapper">
+<!--=============================FeedBack=======================================-->
+		<div class="feedback-container">
+			<button type="button" name="close-button" onclick="closeFeedBack()">X</button>
+			<div class="feedback-title">ОБРАТНАЯ СВЯЗЬ</div>
+			<form action="#" method="post" name="feedback-form">
+				<label for="name-field" class="label">Ваше имя*</label>
+				<input id="name-field" type="text" name="user-name" placeholder="Имя" required> 
+				<label for="phone-field" class="label">Телефон*</label>
+				<input id="phone-field" type="text" name="user-phone" placeholder="номер телефона" required>
+				<label for="email-field" class="label">E-mail*</label>
+				<input id="email-field" type="text" name="user-email" placeholder="почта" required>
+				<label for="message-field" class="label">Сообщение</label>
+				<textarea id="message-field" name="user-message" rows="10"></textarea>
+				<button type="submit" name="feedback-submit">ОТПРАВИТЬ</button>
+			</form>
+		</div>
+		<div class="background-wrapper"></div>
+
+<!--==============================HEADER========================================-->
+		<header>
+			<div class="header-wrapper">
+				<div class="logo-container">
+					<div class="logo"></div>
+					<div class="logo-content-container">
+						<h1 class="company-name">Название<br>компании</h1>
+						<div>самая клевая компания</div>
+					</div>
+				</div>
+				<div>
+					<div class="phone">+7(499) 777-77-77<br>+7(499) 777-77-77</div>
+					<div class="feedback">
+					<button type="button" name="feedback-button" onclick="showFeedBack()">Обратная связь</button></div>
+				</div>
+			</div>
+		</header>
+<!--==============================Top Menu======================================-->
+		<nav class="top-menu-container">
+			<ul class="top-menu">
+				<li><a href="#">Главная</a></li>
+				<li class="bracket">|</li>
+				<li>
+					<a href="#" class="sub-menu-link">Каталог <span>&or;</span></a>
+					<ul class="sub-menu">
+						<li><a href="#">Автомобили</a></li>
+						<li><a href="catalog/appliances/appliances.html">Бытовая техника*</a></li>
+						<li><a href="#">Мобильная техника</a></li>
+						<li><a href="#">Компьютеры</a></li>
+						<li><a href="#">Одежда</a></li>
+						<li><a href="#">Недвижимость</a></li>
+					</ul>
+				</li>
+				<li class="bracket">|</li>
+				<li><a href="#">Доставка и оплата</a></li>
+				<li class="bracket">|</li>
+				<li><a href="#">Прайс-лист</a></li>
+				<li class="bracket">|</li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+		</nav>
+<!--==============================Slider========================================-->
+		<div class="slider-wrapper">
+			<svg class="svg-image" width="100%" height="400px">
+				<defs>
+					<symbol id="s-circle" >
+						<circle r='162' cx="200" cy="200" style="fill-opacity: 0.3" />
+					</symbol>					
+				</defs>
+
+				<use xlink:href="#s-circle" x="45" y="70"	fill="rgb(67,92,200)" />
+				<use xlink:href="#s-circle" x="563" y="50"	fill="rgb(95,207,62)" transform="scale(0.55, 0.55)" />
+				<use xlink:href="#s-circle" x="490" y="20"	fill="rgb(247,151,69)" transform="scale(0.92, 0.92)" />
+				<use xlink:href="#s-circle" x="1170" y="66"	fill="rgb(67,92,200)" transform="scale(0.7, 0.7)" />
+				<use xlink:href="#s-circle" x="1083" y="-105"	fill="rgb(247,151,69)" transform="scale(0.92, 0.92)" />
+				<use xlink:href="#s-circle" x="2058" y="325"	fill="rgb(95,207,62)" transform="scale(0.55, 0.55)" />
+			</svg>
+			<div class="slider-container">
+				<div>
+					<div class="overlink-wrapper">
+						<a href="#" class="slider-link-container">
+							<div class="slider-background slider-background-1"></div>
+						</a>
+						<div class="slider-left-arrow slider-arrow">
+							<button type="button" name="prev" onclick="prevSliderImage()">&lsaquo;</button>
+						</div>
+						<div class="slider-right-arrow slider-arrow">
+							<button type="button" name="next" onclick="nextSliderImage()">&rsaquo;</button>
+						</div>
+					</div>
+					<div id="sliderButtonsContainer"></div>
+				</div>
+			</div>
+		</div>
+
+<!--==============================Main-Content===================================-->
+		
+		<div class="content-main-wrapper">
+			<ol class="breadcrumbs">
+				<li class="breadcrumbs-item breadcrumbs-item-home" itemscope itemref="breadcrumb-1">
+					<a href="index.html" itemprop="url" class="breadcrumbs-link">Главная</a>
+				</li>
+				<!-- <li>/</li> -->
+			</ol>
+			<div class="content-wrapper">
+				<!--__________Left-News__________-->
+				<aside class="aside-container home-aside-container">
+					<div class="news-block-container">
+						<h2>Новости</h2>
+						<div class="news-container">
+							<div class="news-time">14 сентября 2013 г.</div>
+							<a class="news-post-link" href="#">
+								<div class="news-text">Редизайн веб-сайта архитектурного бюро.</div>
+							</a>
+						</div>
+						<div class="news-container">
+							<div class="news-time">14 сентября 2013 г.</div>
+							<a class="news-post-link" href="#">
+								<div class="news-text">Раскрутка интернет-магазина декоративных стикеров и виниловых наклеек.</div>
+							</a>
+						</div>
+						<div class="news-container">
+							<div class="news-time">14 сентября 2013 г.</div>
+							<a class="news-post-link" href="#">
+								<div class="news-text">SEO-продвижение сайта поставщика дизель-генераторов.</div>
+							</a>
+						</div>
+						<div class="news-container">
+							<div class="news-time">14 сентября 2013 г.</div>
+							<a class="news-post-link" href="#">
+								<div class="news-text">Поисковое продвижение веб-сайта поставщика гидрооборудования.</div>
+							</a>
+						</div>
+						<div class="news-history-wrapper">
+							<a href="#">Архив новостей</a>
+						</div>
+					</div>
+				</aside>
+
+				<!--==============================Content===================================-->
+				<article class="content-container home-content-container">
+					
+					<!--__________text__________-->
+					<div class="text-container  home-text-container">
+						<h1>Компания &laquo;Пиксель Плюс&raquo;</h1>	
+						<p>Компания &laquo;Пиксель Плюс&raquo; существует более 6 лет, за это время мы принимали участие в разработке более чем 700 сайтов, поэтому можем уверенно называть себя профессионалами. На данный момент наш коллектив состоит из более чем 30 сотрудников работающих в двух офисах в Москве и Зеленограде. характерные для этого жанра мотивы: неразделенной любви, ухода молодости, угасания души.</p>
+
+						<p>Одним из основных направлений работ нашей компании является поисковое продвижение сайтов, на данный момент мы работаем с более чем 150 постоянными клиентами по более чем 11 000 поисковым запросам. При этом в работе основной акцент мы делаем на качестве работ, а так же применяем собственные уникальные разработки в области SEO продвижения. На данный момент отдел SEO состоит из 9 человек под руководством ведущего специалиста, преимущественно работающих в нашем московском офисе.</p>
+
+						<p>Одним из основных направлений работ нашей компании является поисковое продвижение сайтов, на данный момент мы работаем с более чем 150 постоянными клиентами по более чем 11 000 поисковым запросам. При этом в работе основной акцент мы делаем на качестве работ, а так же применяем собственные уникальные разработки в области SEO продвижения. На данный момент отдел SEO состоит из 9 человек под руководством ведущего специалиста, преимущественно работающих в нашем московском офисе.</p>
+					</div>
+				</article>
+			</div>
+		</div>
+<!--==============================Footer========================================-->
+		<footer>
+			<div class="footer-wrapper">
+				<div class="copyright">&copy; 2012-2013 ЗАО &laquo;Компания&raquo;<br/><a href="">info@name.ru</a> </div>
+				<ul class="footer-nav-links">
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="catalog/catalog.html">Каталог</a></li>
+					<li><a href="#">Доставка и оплата</a></li>
+					<li><a href="#">Прайс-лист</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+				<div class="footer-logo-container">
+					<div class="footer-logo"><img src="img/footer-logo.png" alt="no-img"></div>
+					<div class="footer-logo-content"> <a href="#">Разработка сайта</a> - <br>компания &laquo;Пиксель Плюс&raquo;</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	 <script src="js/script.js"></script>
+
+</body>
+</html>
+
