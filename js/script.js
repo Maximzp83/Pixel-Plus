@@ -78,6 +78,13 @@ function openCloseLeftMenu(elem) {
 var SlidesQuantity = 4,  //Количество слайдов (константа)
 		currentSlide = 1; //текущий слайд (изменяющаяся глобальная переменная)
 
+var prevSliderArrow = document.querySelector('.slider-arrow > button[name="prev"]'),
+	  nextSliderArrow = document.querySelector('.slider-arrow > button[name="next"]');
+
+prevSliderArrow.onclick = prevSliderImage;
+nextSliderArrow.onclick = nextSliderImage;
+
+
    // -----Стрелки слайдера-----
 function prevSliderImage() {   	//Предыдущий слайд
 	var sliderElement = document.querySelector('.slider-background');
